@@ -10,15 +10,21 @@ var main = function() {
     // Some vars
     var num = 10;
     var str = "string";
+
+    // Adding variable based text to body
     $("body").append(num + "<br>");
     $("body").append(str + "<br>");
-
     $("body").append(myArray[3] + "<br>");
     // $("body").append(myArray + "<br>");
 
     // A for loop
     for (i = 0; i < myArray.length; i++) {
         $("body").append(myArray[i] + "<br>");
+    }
+
+    // Calling a function from a for loop
+    for (i = 0; i < myArray.length; i++) {
+        addBling(myArray[i]);
     }
 
     // Messing around with JQuery
@@ -39,9 +45,6 @@ var main = function() {
 // A function
 function addBling(toBeBlinged) {
     $("body").append("~~~~~$$$$$ " + toBeBlinged + " $$$$$~~~~~<br>");
-}
-for (i = 0; i < myArray.length; i++) {
-    addBling(myArray[i]);
 }
 
 // Show Google page
