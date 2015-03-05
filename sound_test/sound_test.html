@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Quick test of embedding audio in html5</h1>
+    <p>Some text...</p>
+
+    <audio controls>
+        <source src="g1.wav" type="audio/wav">
+    </audio>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto mollitia vitae at totam ab repudiandae hic tenetur magni dolorem veritatis itaque minima, consequatur, deserunt officiis voluptas, cum alias, ut aut.</p>
+
+    <audio controls>
+        <source src="g2.wav" type="audio/wav">
+    </audio>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, nesciunt tempora saepe autem doloremque sed tenetur itaque distinctio. Ea excepturi similique maiores mollitia quae ad nihil quisquam doloremque numquam sit!</p>
+    <audio controls>
+        <source src="g3.wav" type="audio/wav">
+    </audio>
+
+	<!-- For some reason the below does not work if id is swapped with preload.  Why?-->
+    <audio id="g3" preload="true">
+        <source src="g3.wav" type="audio/wav" /> Working?
+    </audio>
+
+    <br>
+    <br>
+    <button onclick="run_g3()">test g3</button>
+
+</body>
+<script>
+function run_g3() {
+    var g3 = document.getElementById("g3");
+    console.log("test " + g3);
+    g3.play();
+};
+</script>
+
+</html>
